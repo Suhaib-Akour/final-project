@@ -2,10 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { SectorsRoutingModule } from './sectors-routing.module';
+import { SectorsComponent } from './sectors/sectors.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    SectorsComponent
+  ],
   imports: [
     CommonModule,
     SectorsRoutingModule
