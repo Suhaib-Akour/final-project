@@ -1,0 +1,40 @@
+<app-header></app-header>
+<div class="main">
+  <div class="login-card">
+    <form [formGroup]="formGroup" >
+        <h3>Sign Up</h3>
+    <mat-form-field appearance="outline" class="fil-width">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Name"  formControlName="name" type="text" />
+      <!-- <mat-error *ngIf="name.invalid">You must enter a value</mat-error> -->
+
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="fil-width">
+      <mat-label>Age</mat-label>
+      <input matInput placeholder="Age" formControlName="age" type="number" />
+      <!-- <mat-error *ngIf="age.invalid">You must enter a value</mat-error> -->
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline" class="fil-width">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Email" formControlName="email" type="email" />
+      <!-- <mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error> -->
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="fil-width">
+      <mat-label>Password</mat-label>
+      <input matInput placeholder="Password" formControlName="password" type="password" />
+      <!-- <mat-error *ngIf="password.invalid">{{getPasswordErrorMessage()}}</mat-error> -->
+
+    </mat-form-field>
+
+  <button mat-button color="primary" (click)="signUpClick()" [disabled]="this.formGroup.invalid">Signup</button>
+    <div class="footerSign">
+    <p>Already have an account?</p>
+    <a [routerLink]="['/auth/login']">Login</a>
+  </div>
+</form>
+  </div>
+</div>
+

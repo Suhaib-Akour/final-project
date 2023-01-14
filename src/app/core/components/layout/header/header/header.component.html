@@ -1,0 +1,17 @@
+<mat-toolbar class="mat-elevation-z8">
+  <h1>Final Projecaaaaaaaaaaaaaaaaat</h1>
+  <nav>
+    <ul>
+      <li><a class="navItem" [routerLink]="['/startup']">StartUp</a></li>
+      <div *ngIf="!isLogged else notAuthed">
+        <li><a [routerLink]="['/auth/login']" class="navItem">Login</a></li>
+        <li><a [routerLink]="['/auth/signup']" class="navItem">Signup</a></li>
+        <li><a class="navItem navlast">SHOW MORE</a></li>
+      </div>
+      <ng-template #notAuthed>
+        <li><a (click)="isLougout()" class="logOutIcon"><mat-icon>logout</mat-icon></a></li>
+      </ng-template>
+
+    </ul>
+  </nav>
+</mat-toolbar>

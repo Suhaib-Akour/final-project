@@ -1,0 +1,58 @@
+mat-toolbar{
+  justify-content: space-between;
+background-color: rgb(255, 255, 255);
+}
+li {
+  display:inline-block;
+}
+nav ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+a{
+  text-decoration: none;
+}
+header {
+  background-color: var(--black);
+  overflow-x: hidden;
+  position: fixed;
+  padding: 10px;
+  top: 0;
+  z-index: 1;
+}
+.navlast {
+  border-radius: 15px;
+  border: 1px solid rgba(121, 121, 121, 0.274);
+  color: rgba(99, 99, 99, 0.5)  !important;
+}
+.navlast:hover {
+  border: 1px solid red;
+  color: rgba(53, 52, 52, 0.726) !important;
+}
+.navItem {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: 100;
+  padding: 0.5em;
+  transition: 0.5s ease;
+}
+h1{
+  font-weight: 600;
+  color: black;
+}
+.navItem:hover {
+  border-radius: 20px;
+  color: rgba(99, 99, 99, 0.5);
+}
+
+.logOutIcon .mat-icon{
+  color: rgba(0, 0, 0, 0.473);
+}
+
+.logOutIcon .mat-icon:hover{
+  color: black;
+  cursor: pointer;
+  transition: 1s;
+}

@@ -1,0 +1,24 @@
+<app-header></app-header>
+<div class="main">
+  <div class="login-card">
+    <form [formGroup]="formGroup">
+    <h3>Login</h3>
+    <mat-form-field appearance="outline" class="fil-width">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Email" formControlName="email" type="email" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="fil-width">
+      <mat-label>Password</mat-label>
+      <input matInput placeholder="Password" formControlName="password" type="password" />
+    </mat-form-field>
+
+    <button mat-button color="primary" (click)="loginClick()" [disabled]="this.formGroup.invalid">Login</button>
+    <div class="footerSign">
+    <p>Don't have an account?</p>
+    <a [routerLink]="['/auth/signup']" >Sign Up</a>
+
+  </div>
+</form>
+  </div>
+</div>

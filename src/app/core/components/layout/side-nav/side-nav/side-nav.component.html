@@ -1,0 +1,49 @@
+<mat-sidenav-container>
+  <mat-sidenav #snav>
+    <mat-list *ngIf="!loading">
+      <mat-spinner diameter="20" color="primary"></mat-spinner>
+      <div *ngFor="let item of navServiceList.children">
+        <div *ngIf="item.children.length===0 ; else hasChild">
+          <a [routerLink]="[item.route]" (click)="clickToSmall()">
+            <mat-list-item>
+              <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
+              <div matListItemTitle class="item-text">{{item.displayName}}</div>
+            </mat-list-item>
+          </a>
+        </div>
+        <ng-template #hasChild>
+          <mat-list-item>
+            <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
+            <div matListItemTitle class="item-text">{{item.displayName}}</div>
+            <mat-icon class="arrow-child">keyboard_arrow_right</mat-icon>
+          </mat-list-item>
+          <mat-list>
+            <div *ngFor="let childItem of item.children ">
+              <a [routerLink]="[childItem.route]" (click)="clickToSmall()">
+                <mat-list-item class="child-item">
+                  <mat-icon matListItemIcon>{{childItem.icon}}</mat-icon>
+                  <div matListItemTitle class="item-text">{{childItem.displayName}}</div>
+                </mat-list-item>
+              </a>
+            </div>
+          </mat-list>
+        </ng-template>
+      </div>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="mat-elevation-z8">
+      <button mat-icon-button class="example-icon" (click)="snav.toggle()">
+        <mat-icon class="menuCp">menu</mat-icon>
+      </button>
+      <span class="projName">FINAL PROJECT</span>
+      <span class="spec"></span>
+      <a (click)="isLougout()" class="logOutIcon"><mat-icon>logout</mat-icon></a>
+    </mat-toolbar>
+    <main>
+      <div class="mat-elevation-z8 contentRout">
+        <router-outlet></router-outlet>
+      </div>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

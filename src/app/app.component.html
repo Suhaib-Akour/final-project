@@ -1,0 +1,4 @@
+<app-side-nav *ngIf="isLoggedIn$ | async; else notAuth"></app-side-nav>
+<ng-template #notAuth>
+  <router-outlet> </router-outlet>
+</ng-template>
