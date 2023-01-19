@@ -1,17 +1,33 @@
-<mat-toolbar class="mat-elevation-z8">
-  <h1>Final Projecaaaaaaaaaaaaaaaaat</h1>
-  <nav>
-    <ul>
-      <li><a class="navItem" [routerLink]="['/startup']">StartUp</a></li>
-      <div *ngIf="!isLogged else notAuthed">
-        <li><a [routerLink]="['/auth/login']" class="navItem">Login</a></li>
-        <li><a [routerLink]="['/auth/signup']" class="navItem">Signup</a></li>
-        <li><a class="navItem navlast">SHOW MORE</a></li>
-      </div>
-      <ng-template #notAuthed>
-        <li><a (click)="isLougout()" class="logOutIcon"><mat-icon>logout</mat-icon></a></li>
-      </ng-template>
+<header>
+  <nav [class.header_change]="header_variabel">
+    <h1><a [routerLink]="['/home']"><img class="logo" src="https://firebasestorage.googleapis.com/v0/b/project-okour.appspot.com/o/logoN1.svg?alt=media&token=1420dbb8-6a0f-4f27-9f0d-56def3218ddf" alt="null"></a></h1>
+    <div class="stickyHeader_we wrapper header">
 
-    </ul>
+      <div *ngIf="isLoggedIn$ | async; else notAuthed">
+        <ul>
+          <div class="show">
+
+            <li><a class="navItem " [routerLink]="['/home']">Home</a></li>
+            <li><a class="navItem" [routerLink]="['/startup']">StartUp</a></li>
+            <li><a class="navItem" [routerLink]="['/sectors']">Sectors</a></li>
+ <ul>
+
+          <li><a (click)="isLougout()" class="logOutIcon"><mat-icon>logout</mat-icon></a></li>
+
+        </ul>
+
+          </div>
+        </ul>
+
+      </div>
+      <div class="notShow">
+        <ng-template #notAuthed>
+          <ul>
+            <li><a [routerLink]="['/auth/login']" class="navItem">Login</a></li>
+            <li><a [routerLink]="['/auth/signup']" class="navItem">Signup</a></li>
+          </ul>
+      </ng-template>
+</div>
+    </div>
   </nav>
-</mat-toolbar>
+</header>

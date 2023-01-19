@@ -10,6 +10,7 @@ import { AuthService } from 'src/app/core/services/auth.service';
 })
 export class LoginComponent implements OnInit {
 formGroup!:FormGroup
+hide = true;
   constructor(private router:Router,private formBulider:FormBuilder,private _authsercice:AuthService) { }
 
   ngOnInit(): void {
@@ -24,9 +25,11 @@ formGroup!:FormGroup
   })
   }
   loginClick(){
+    if(this.formGroup.invalid){
+      window.alert("Password Or Email is invalid")
+    }else{
    this._authsercice.login(this.email.value,this.password.value);
-    this.router.navigate(['/startup/all-startup'])
-
+    }
   }
 
   get email() {

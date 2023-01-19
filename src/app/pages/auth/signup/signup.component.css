@@ -3,7 +3,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #e2e2e2be;
+  background-image: url(auth3.jpg);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+   height: 100vh;
+   width: 100%;
+   background-blend-mode: lighten;
 }
 
 .login-card form {
@@ -11,7 +17,7 @@
   max-width: 900px;
   min-height: 300px;
   box-shadow: 10px 10px 12px #88888888;
-  background-color: #ffffff;
+  background-color: #ffffff86;
   border-radius: 20px;
   display: flex;
   flex-direction: column;

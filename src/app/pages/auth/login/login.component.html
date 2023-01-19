@@ -1,19 +1,21 @@
-<app-header></app-header>
 <div class="main">
   <div class="login-card">
     <form [formGroup]="formGroup">
     <h3>Login</h3>
     <mat-form-field appearance="outline" class="fil-width">
-      <mat-label>Email</mat-label>
+      <mat-label>Enter your Email</mat-label>
       <input matInput placeholder="Email" formControlName="email" type="email" />
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="fil-width">
-      <mat-label>Password</mat-label>
-      <input matInput placeholder="Password" formControlName="password" type="password" />
-    </mat-form-field>
+  <mat-label>Enter your password</mat-label>
+  <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+  </button>
+</mat-form-field>
 
-    <button mat-button color="primary" (click)="loginClick()" [disabled]="this.formGroup.invalid">Login</button>
+    <button mat-button color="primary" (click)="loginClick()" >Login</button>
     <div class="footerSign">
     <p>Don't have an account?</p>
     <a [routerLink]="['/auth/signup']" >Sign Up</a>

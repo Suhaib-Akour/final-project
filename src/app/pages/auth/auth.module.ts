@@ -10,8 +10,9 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatRadioModule} from '@angular/material/radio';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { HeaderModule } from "../../core/components/layout/header/header.module";
+import {MatIconModule} from '@angular/material/icon';
 
-const MatInputs=[ReactiveFormsModule,FormsModule,MatRadioModule,MatFormFieldModule,MatInputModule,MatButtonModule]
+const MatInputs=[MatIconModule,ReactiveFormsModule,FormsModule,MatRadioModule,MatFormFieldModule,MatInputModule,MatButtonModule]
 
 
 @NgModule({
