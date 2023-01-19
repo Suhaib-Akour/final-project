@@ -6,9 +6,9 @@ import { HeaderModule } from "../../core/components/layout/header/header.module"
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
-
+import {MatPaginatorModule} from '@angular/material/paginator';
 import { MatListModule } from '@angular/material/list';
-import { SideNavModule } from "../../core/components/layout/side-nav/side-nav.module";
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 
@@ -25,7 +25,8 @@ import { SideNavModule } from "../../core/components/layout/side-nav/side-nav.mo
         MatIconModule,
         MatListModule,
         MatSidenavModule,
-        SideNavModule
+        MatPaginatorModule,
+        MatFormFieldModule
     ]
 })
 export class StartupModule { }

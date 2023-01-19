@@ -12,10 +12,10 @@ export class AuthGuard implements CanLoad {
     if (isLoggedin) {
       console.log(isLoggedin)
       return true;
-    } else {
+    }
       this.router.navigate(['/home']);
       return false;
-    }
+
   }
 }
 //

@@ -12,9 +12,9 @@ export class NoAuthGuard implements CanLoad {
     const isLoggedin = this._authserives.isloggedIn;
     if (!isLoggedin) {
       return true;
-    } else {
+    }
       this.router.navigate(['/home']);
       return false;
-    }
+
   }
 }

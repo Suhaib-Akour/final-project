@@ -8,51 +8,71 @@ import { UserCredential } from '@firebase/auth-types';
 import IUser from '../interfaces/create-user';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
   isLoggdIn$ = new BehaviorSubject<boolean>(!!localStorage.getItem('token'));
   dbPath = '/users';
 
-  constructor(private router: Router,private angularFireAuth:AngularFireAuth,private angularFireDatabase:AngularFireDatabase) { }
+  constructor(
+    private router: Router,
+    private angularFireAuth: AngularFireAuth,
+    private angularFireDatabase: AngularFireDatabase
+  ) {
+    this.authStateSubscripe();
+  }
   get isloggedIn(): boolean {
-
     return this.isLoggdIn$.getValue();
   }
-  login(email:any,password:any):Observable<any> {
-    localStorage.setItem('token', 'qwe123');
-    this.isLoggdIn$.next(true);
-    return from (this.angularFireAuth.signInWithEmailAndPassword(email,password))
+  login(email: any, password: any): Observable<any> {
+    return from(
+      this.angularFireAuth
+      .signInWithEmailAndPassword(email, password)
+      .catch((error) => {
+        window.alert(error.message);
+      })    );
   }
+  authStateSubscripe() {
+    this.angularFireAuth.authState.subscribe((user) => {
+      if (user) {
+        if (!this.isloggedIn) {
+          this.router.navigate(['/startup/all-startup']);
+        }
+        // this.getUserById(user.uid);
 
-   createUser(email: string, password: string): Observable<UserCredential> {
-     return from(
-       this.angularFireAuth.createUserWithEmailAndPassword(email, password)
-     );
-   }
-  logout():Observable<any> {
+        localStorage.setItem('token', user.uid);
+        this.isLoggdIn$.next(true);
+      } else {
+        localStorage.removeItem('token');
+        this.isLoggdIn$.next(false);
+      }
+    });
+  }
+  createUser(email: string, password: string): Observable<UserCredential> {
+    return from(
+      this.angularFireAuth.createUserWithEmailAndPassword(email, password)
+    );
+  }
+  logout(): Observable<any> {
     localStorage.removeItem('token');
     this.isLoggdIn$.next(false);
-    this.router.navigate(['/auth/login']);
-    return from(this.angularFireAuth.signOut())
+    this.router.navigate(['/home']);
+    return from(this.angularFireAuth.signOut());
   }
-
 
   public createUsersData(userId: any, userData: IUser) {
     this.angularFireDatabase.list('/users').update(userId, {
-      name:userData.name,
+      name: userData.name,
       email: userData.email,
       age: userData.age,
       userId: userId,
-      role:'Enduser',
+      role: 'Enduser',
     });
   }
-
 
   // getUsersById(uid: any) {
   //   return this.db.object('/users/' + uid);
   // }
-
 
   // geerD(): Observable<any> {
   //   return this._authFire.authState.pipe(
@@ -67,6 +87,4 @@ export class AuthService {
   //     })
   //   );
   // }
-
-
 }

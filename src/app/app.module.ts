@@ -10,12 +10,12 @@ import { environment } from 'src/environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-import { SideNavModule } from "./core/components/layout/side-nav/side-nav.module";
 import { HeaderModule } from "./core/components/layout/header/header.module";
+import { FooterModule } from "./core/components/footer/footer/footer.module";
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -29,8 +29,8 @@ import { HeaderModule } from "./core/components/layout/header/header.module";
         AngularFireAuthModule,
         AngularFirestoreModule,
         AngularFireModule.initializeApp(environment.firebase),
-        SideNavModule,
-        HeaderModule
+        HeaderModule,
+        FooterModule
     ]
 })
 export class AppModule { }
