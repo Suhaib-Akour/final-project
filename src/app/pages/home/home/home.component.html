@@ -1,46 +1,246 @@
 <main>
   <div class="img">
     <div class="pageWelcome">
-      <div class="welcText">World of creativity</div>
+      <div class="welcText">CREATIVE</div>
 
-</div>
-</div>
+    </div>
+  </div>
 </main>
 
 <div class="box text-center">
   <div class="box-item">
-    <i class="ti-filter"><mat-icon >code</mat-icon></i>
-      <h6 class="box-title">UX/UI Design</h6>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis excepturi, repellat esse laborum explicabo quia.</p>
+    <i class="ti-filter"><mat-icon>code</mat-icon></i>
+    <h6 class="box-title">UX/UI Design</h6>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis excepturi, repellat esse laborum explicabo quia.
+    </p>
   </div>
   <div class="box-item">
-    <i class="ti-filter"><mat-icon >web</mat-icon></i>
-      <h6 class="box-title">Web Development</h6>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis excepturi, repellat esse laborum explicabo quia.</p>
+    <i class="ti-filter"><mat-icon>web</mat-icon></i>
+    <h6 class="box-title">Web Development</h6>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis excepturi, repellat esse laborum explicabo quia.
+    </p>
   </div>
   <div class="box-item">
-    <i class="ti-filter"><mat-icon >dashboard</mat-icon></i>
-      <h6 class="box-title">App Design</h6>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis excepturi, repellat esse laborum explicabo quia.</p>
+    <i class="ti-filter"><mat-icon>dashboard</mat-icon></i>
+    <h6 class="box-title">App Design</h6>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis excepturi, repellat esse laborum explicabo quia.
+    </p>
   </div>
 </div>
 
 <section id="about">
   <div class="container">
-      <div class="row align-items-center">
-          <div class="col-md-5 col-lg-4">
-              <img src="https://firebasestorage.googleapis.com/v0/b/project-okour.appspot.com/o/about.jpg?alt=media&token=247d1994-d124-49e5-86be-34334171b5a7" alt="e" class="w-100 img-thumbnail mb-3">
-          </div>
-          <div></div>
-          <div class="col-md-7 col-lg-8">
-              <h6 class="section-subtitle mb-0">We Create</h6>
-              <h6 class="section-title mb-3">Awesome Work</h6>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente cupiditate quas, amet harum perferendis minus, cum dolorum obcaecati iste aspernatur voluptatum aut.</p>
-              <p>Cum laudantium unde nemo doloribus eligendi quodarum ea vitae dicta. Accusantium vero, ea? Alias, atque libero. Id, ut harum. </p>
-              <p>consectetur adipisicing elit. Omnis quidem, quos iure a dolorum illum culpa quia nemo soluta, ratione harum beatae minus doloribus consectetur! Similique tempora sunt doloribus molestias.</p>
-          </div>
+    <div class="row align-items-center">
+      <div class="col-md-5 col-lg-4">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/project-okour.appspot.com/o/about.jpg?alt=media&token=247d1994-d124-49e5-86be-34334171b5a7"
+          alt="e" class="w-100 img-thumbnail mb-3">
       </div>
+      <div></div>
+      <div class="col-md-7 col-lg-8">
+        <h6 class="section-subtitle mb-0">We Create</h6>
+        <h6 class="section-title mb-3">Awesome Work</h6>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente cupiditate quas, amet harum perferendis
+          minus, cum dolorum obcaecati iste aspernatur voluptatum aut.</p>
+        <p>Cum laudantium unde nemo doloribus eligendi quodarum ea vitae dicta. Accusantium vero, ea? Alias, atque
+          libero. Id, ut harum. </p>
+        <p>consectetur adipisicing elit. Omnis quidem, quos iure a dolorum illum culpa quia nemo soluta, ratione harum
+          beatae minus doloribus consectetur! Similique tempora sunt doloribus molestias.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="has-bg-img py-md">
+  <div class="container text-center">
+    <h6 class="section-subtitle">Let See</h6>
+    <h6 class="section-title mb-6">Our Services</h6>
+    <div class="widget mb-4">
+      <div class="widget-item">
+
+        <h4>Free signin</h4>
+      </div>
+      <div class="widget-item">
+
+        <h4>Easy to use</h4>
+      </div>
+      <div class="widget-item">
+
+        <h4>Develope</h4>
+      </div>
+      <div class="widget-item">
+
+        <h4>Provide</h4>
+      </div>
+    </div>
   </div>
 </section>
 
 
+<section id="portfolio">
+  <div class="container text-center">
+    <h6 class="section-subtitle">Look up to sectors</h6>
+    <h6 class="section-title mb-5">SECTORS</h6>
+    <div class="row" style="justify-content: center;">
+      <div class="col-sm-6">
+        <div class="img-wrapper">
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/project-okour.appspot.com/o/tourist.jfif?alt=media&token=531718f1-828b-4112-8336-a10e92cff00a"
+            alt="">
+          <div class="overlay" (click)="tosector()">
+            <div class="overlay-infos">
+              <h5>Tourism</h5>
+            </div>
+          </div>
+        </div>
+        <div class="img-wrapper">
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/project-okour.appspot.com/o/Hospitals.jpg?alt=media&token=1b4c0f2b-be6e-471d-b98d-a511d54e3e5c"
+            alt="">
+          <div class="overlay" (click)="tosector()">
+            <div class="overlay-infos">
+              <h5>Medical</h5>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="img-wrapper">
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/project-okour.appspot.com/o/tecnology.jpg?alt=media&token=8fffaf26-218c-479b-baef-c6eb38cafa5a"
+            alt="">
+          <div class="overlay" (click)="tosector()">
+            <div class="overlay-infos">
+              <h5>Technology</h5>
+
+            </div>
+          </div>
+        </div>
+        <div class="img-wrapper">
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/project-okour.appspot.com/o/real%20estat.jpg?alt=media&token=61e03ebd-4767-480a-af95-c77a0940770f"
+            alt="">
+          <div class="overlay" (click)="tosector()">
+            <div class="overlay-infos">
+              <h5>Real Estate</h5>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="team">
+  <div class="container">
+    <h6 class="section-subtitle text-center">Meet With</h6>
+    <h6 class="section-title mb-5 text-center">Our employees</h6>
+    <div class="row">
+      <div class="col-sm-6 col-md-4">
+        <div class="card text-center mb-4">
+          <img class="card-img-top inset"
+            src="https://firebasestorage.googleapis.com/v0/b/project-okour.appspot.com/o/avatar-6.jpg?alt=media&token=eede361c-7f3b-4f39-a7eb-5830cf43a9a9">
+          <div class="card-body">
+            <h6 class="small text-primary font-weight-bold">FOUNDER</h6>
+            <h5 class="card-title">Suhaib akour</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quos esse tenetur illo qui, nostrum.</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <div class="card text-center mb-4">
+          <img class="card-img-top inset"
+            src="https://firebasestorage.googleapis.com/v0/b/project-okour.appspot.com/o/avatar-5.jpg?alt=media&token=50a4c04d-ec8c-4fad-91dd-a2bef8ac04b6">
+          <div class="card-body">
+            <h6 class="small text-primary font-weight-bold">CEO</h6>
+            <h5 class="card-title">Ahmad ali</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quos esse tenetur illo qui, nostrum.</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <div class="card text-center mb-4">
+          <img class="card-img-top inset"
+            src="https://firebasestorage.googleapis.com/v0/b/project-okour.appspot.com/o/avatar-4.jpg?alt=media&token=0164284e-9075-4991-a5c9-b5184692124b">
+          <div class="card-body">
+            <h6 class="small text-primary font-weight-bold">Designer</h6>
+            <h5 class="card-title">Tareq ahmad</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quos esse tenetur illo qui, nostrum.</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <div class="card text-center mb-4">
+          <img class="card-img-top inset"
+            src="https://firebasestorage.googleapis.com/v0/b/project-okour.appspot.com/o/avatar-3.jpg?alt=media&token=163019f9-c636-41d6-95f3-329f95f1c72e">
+          <div class="card-body">
+            <h6 class="small text-primary font-weight-bold">App Designer</h6>
+            <h5 class="card-title">Nadeen sami</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quos esse tenetur illo qui, nostrum.</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <div class="card text-center mb-4">
+          <img class="card-img-top inset"
+            src="https://firebasestorage.googleapis.com/v0/b/project-okour.appspot.com/o/avatar-2.jpg?alt=media&token=ab2fbcaa-26e4-489a-8fe6-d5fee9ccee2a">
+          <div class="card-body">
+            <h6 class="small text-primary font-weight-bold">Developer</h6>
+            <h5 class="card-title">Sara mazen</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quos esse tenetur illo qui, nostrum.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <div class="card text-center mb-4">
+          <img class="card-img-top inset"
+            src="https://firebasestorage.googleapis.com/v0/b/project-okour.appspot.com/o/avatar-1.jpg?alt=media&token=60f20923-3f0b-46ea-bc2f-b1044211d32a">
+          <div class="card-body">
+            <h6 class="small text-primary font-weight-bold">photographer</h6>
+            <h5 class="card-title">Bassma wael</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quos esse tenetur illo qui, nostrum.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="testimonial">
+  <div class="container">
+    <h6 class="section-subtitle text-center">Testimonial</h6>
+    <h6 class="section-title text-center mb-6">What Our Clients Says</h6>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="testimonial-wrapper">
+          <div class="img-holder">
+            <img src="https://firebasestorage.googleapis.com/v0/b/project-okour.appspot.com/o/avatar.jpg?alt=media&token=bf7c5627-2c24-48db-b637-389432c39690" alt="">
+          </div>
+          <div class="body">
+            <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque doloribus autem aperiam
+              earum nostrum omnis blanditiis corporis perspiciatis adipisci nihil.</p>
+            <h6 class="title">Omran Salem</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="testimonial-wrapper">
+          <div class="img-holder">
+            <img src="https://firebasestorage.googleapis.com/v0/b/project-okour.appspot.com/o/avatar-7.jpg?alt=media&token=012ed9de-e9f3-4b04-8f09-bd85d5d6a50d" alt="">
+          </div>
+          <div class="body">
+            <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque doloribus autem aperiam
+              earum nostrum omnis blanditiis corporis perspiciatis adipisci nihil.</p>
+            <h6 class="title">Rashed mohammed</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
