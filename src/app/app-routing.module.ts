@@ -2,20 +2,19 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './core/guards/auth.guard';
 import { NoAuthGuard } from './core/guards/no-auth.guard';
+import { ApprovalComponent } from './pages/approval/approval/approval.component';
 import { HomeComponent } from './pages/home/home/home.component';
 
 const routes: Routes = [
   {
     path:'',
-    redirectTo:'home',
+    redirectTo:'app',
     pathMatch:'full'
   },
 
 {
   path:'home',
   loadChildren:()=> import('./pages/home/home.module').then(e=>e.HomeModule),
-component:HomeComponent,
-
 },
 {
   path: 'auth',
@@ -25,10 +24,10 @@ component:HomeComponent,
 },
 
 {
-  path: 'approval',
+  path: 'app',
   loadChildren: () =>
     import('./pages/approval/approval.module').then((m) => m.ApprovalModule),
-
+component:ApprovalComponent,
 
 },
 {
@@ -48,7 +47,7 @@ component:HomeComponent,
 
 {
   path: '**',
-  redirectTo: 'home',
+  redirectTo: 'app',
   pathMatch: 'full',
 },
 ];

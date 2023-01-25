@@ -19,7 +19,11 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.isLoggedIn$ = this._auth.isLoggdIn$
   }
+  showNav = false;
 
+  toggleNav() {
+    this.showNav = !this.showNav;
+  }
   isLougout(){
     this._auth.logout();
   }
@@ -32,4 +36,6 @@ export class HeaderComponent implements OnInit {
       this.header_variabel=false;
     }
   }
+
+
 }
