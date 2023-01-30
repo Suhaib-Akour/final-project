@@ -50,3 +50,12 @@ button{
   color: #0452b9be;
   font-weight: 500;
 }
+@media  (max-width:420px){
+  .login-card {
+    max-width: 330px;
+    margin-top: 60px;
+  }
+  .fil-width{
+    min-width: 280px;
+}
+}

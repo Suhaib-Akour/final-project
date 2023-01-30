@@ -1,6 +1,5 @@
-<header>
-  <nav [class.header_change]="header_variabel">
-
+<header >
+  <nav [class.header_change]="header_variabel"class="display1">
     <div class="logoMain">
       <a [routerLink]="['/approval']">
         <img class="logo"
@@ -18,10 +17,15 @@
             <li><a class="navItem " [routerLink]="['/home']">Home</a></li>
             <li><a class="navItem" [routerLink]="['/startup']">StartUp</a></li>
             <li><a class="navItem" [routerLink]="['/sectors']">Sectors</a></li>
+            <li><a class="navItem" >
+              <button mat-button [matMenuTriggerFor]="menu"
+                  #menuTrigger>Edit</button>
+                <mat-menu #menu="matMenu">
+                  <button mat-menu-item [routerLink]="['/dashborder']">StartUp</button>
+                </mat-menu></a></li>
             <ul>
 
               <li><a (click)="isLougout()" class="logOutIcon"><mat-icon>logout</mat-icon></a></li>
-
             </ul>
 
           </div>
@@ -36,5 +40,12 @@
         </ng-template>
       </div>
     </div>
-  </nav>
+    </nav>
+
 </header>
+
+
+
+
+
+

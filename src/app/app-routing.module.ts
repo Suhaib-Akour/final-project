@@ -44,6 +44,13 @@ component:ApprovalComponent,
    canLoad:[AuthGuard]
 
     },
+    {
+      path: 'dashborder',
+      loadChildren: () =>
+       import('./pages/dashborder/dashborder/dashborder.module').then((m) => m.DashborderModule),
+       canLoad:[AuthGuard]
+
+        },
 
 {
   path: '**',

@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { HostListener } from '@angular/core';
+import { Router } from '@angular/router';
+import { MediaMatcher } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-header',
@@ -13,9 +15,7 @@ export class HeaderComponent implements OnInit {
   email!:string;
   header_variabel=false;
 
-
-  constructor(private _auth:AuthService) { }
-
+  constructor(private _auth:AuthService,private router:Router) {  }
   ngOnInit(): void {
     this.isLoggedIn$ = this._auth.isLoggdIn$
   }
@@ -26,6 +26,7 @@ export class HeaderComponent implements OnInit {
   }
   isLougout(){
     this._auth.logout();
+    this.router.navigate(['/app'])
   }
   @HostListener("document:scroll")
   scrollfunction(){
@@ -36,6 +37,4 @@ export class HeaderComponent implements OnInit {
       this.header_variabel=false;
     }
   }
-
-
 }

@@ -100,7 +100,7 @@ color:rgb(36, 36, 36); ;
 .logOutIcon mat-icon{
 position: absolute;
 right: 36px;
-top: 24px;
+top: 33px;
 }
 .sigup{
   background-color: #008b99;
@@ -124,8 +124,29 @@ top: 24px;
 .header_change ul li a {
   color: rgb(255, 255, 255);
 }
-@media (max-width: 592px) {
-ul li a{
-  color: blue;
+@media (max-width: 614px) {
+  nav{
+    width: 100%;
 }
-  }
+.wrapper {
+margin: 0 57px;
+}
+ul{
+  padding: 0px 4px;
+}
+li{
+  width: 57px;
+}
+ul li a{
+  font-size: 14px;
+}
+.mat-button{
+  padding: 0 0px;
+  min-width: 37px;
+}
+.logOutIcon mat-icon {
+
+  right: 10px;
+
+}
+}

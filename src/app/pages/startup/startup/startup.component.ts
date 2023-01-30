@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { Startup } from 'src/app/core/interfaces/startups';
+import { AuthService } from 'src/app/core/services/auth.service';
 import { StartupsService } from 'src/app/core/services/startups.service';
 
 @Component({
@@ -8,7 +10,6 @@ import { StartupsService } from 'src/app/core/services/startups.service';
   styleUrls: ['./startup.component.css'],
 })
 export class StartupComponent implements OnInit {
-  key: string = '';
   listOfStartups: Startup[] = [];
   totalcompany!: number;
   loading = true;
@@ -25,5 +26,6 @@ export class StartupComponent implements OnInit {
         this.totalcompany = this.listOfStartups.length;
       }
     });
+
   }
 }

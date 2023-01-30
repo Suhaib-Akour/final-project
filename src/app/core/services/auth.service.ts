@@ -13,6 +13,7 @@ import IUser from '../interfaces/create-user';
 export class AuthService {
   isLoggdIn$ = new BehaviorSubject<boolean>(!!localStorage.getItem('token'));
   dbPath = '/users';
+  userInfo = new BehaviorSubject<any>({});
 
   constructor(
     private router: Router,
@@ -69,22 +70,13 @@ export class AuthService {
       role: 'Enduser',
     });
   }
+  getUserById(userId: string) {
+    this.angularFireDatabase
+      .object(`${this.dbPath}/${userId}`)
+      .valueChanges()
+      .subscribe((user) => {
+        this.userInfo.next(user);
+      });
+  }
 
-  // getUsersById(uid: any) {
-  //   return this.db.object('/users/' + uid);
-  // }
-
-  // geerD(): Observable<any> {
-  //   return this._authFire.authState.pipe(
-  //     switchMap((user) => {
-  //       return this.getUsersById(user?.uid)
-  //         .valueChanges()
-  //         .pipe(
-  //           map((user) => {
-  //             return user;
-  //           })
-  //         );
-  //     })
-  //   );
-  // }
 }
