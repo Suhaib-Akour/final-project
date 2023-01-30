@@ -132,6 +132,29 @@
     </div>
   </div>
 </section>
+
+<section id="team">
+  <div class="container">
+    <h6 class="section-subtitle text-center">Look up to startups</h6>
+    <h6 class="section-title mb-5 text-center">Startup</h6>
+    <div class="row">
+      <div class="col-sm-6 col-md-4" *ngFor="let startup of listOfStartups">
+        <div class="card text-center mb-4">
+          <img [src]="startup.logo" class="card-img-top inset">
+          <div class="card-body">
+            <h6 class="small text-primary font-weight-bold">{{startup.FounderName}}</h6>
+            <h5 class="card-title">{{startup.name}}</h5>
+            <p>{{startup.emailAddress}} <br> {{startup.city}} <br>{{startup.sectors}} <br> {{startup.yearOfEstablish}} </p>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 <section id="team">
   <div class="container">
     <h6 class="section-subtitle text-center">Meet With</h6>
@@ -244,3 +267,6 @@
     </div>
   </div>
 </section>
+
+
+

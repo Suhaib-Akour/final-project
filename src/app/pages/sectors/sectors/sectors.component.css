@@ -1,3 +1,4 @@
+
 #about{
   margin-bottom: 1rem;
   margin-top: 3rem;
@@ -15,6 +16,9 @@ main{
   background-size: cover;
    height: 80vh;
    width: 35vw;
+}
+.overflow{
+  overflow: auto;
 }
 .textmain{
   display: flex;
@@ -57,11 +61,23 @@ padding-right: 15px;
 padding-left: 15px;
 }
 @media (max-width: 592px) {
+  *{
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
   .img_bg{
     min-width: 40vw;
   }
   .uppertext{
-    font-size: 4rem;
+    font-size: 3rem;
+  } hr{
+    width: 50px;
+  }
+  p{
+    width: 95%;
+  }
+  .col-md-5, .col-lg-4{
+    width: 93%;
   }
   }
   @media (min-width: 392px) {
@@ -78,6 +94,7 @@ padding-left: 15px;
   .container {
     max-width: 540px;
   }
+
 }
 
 @media (min-width: 768px) {

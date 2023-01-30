@@ -13,7 +13,6 @@
 }
 
 .login-card form {
-  min-width: 300px;
   max-width: 900px;
   min-height: 300px;
   box-shadow: 10px 10px 12px #88888888;
@@ -56,5 +55,14 @@ mat-radio-group {
 }
 mat-radio-group mat-label ,mat-radio-button{
   margin-inline-end: 10px;
+}
+@media  (max-width:420px){
+  .login-card {
+    max-width: 330px;
+    margin-top: 60px;
+  }
+  .fil-width{
+    min-width: 280px;
+}
 }
 

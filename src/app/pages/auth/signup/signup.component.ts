@@ -29,6 +29,7 @@ export class SignupComponent implements OnInit {
           /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/)]
       ],
     });
+
   }
   signUpClick() {
     if (this.formGroup.invalid) {
